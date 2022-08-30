@@ -44,13 +44,17 @@
     function myFunction(value) {
         var img = document.createElement("img");
         var p = document.createElement("p");
+        var p1 = document.createElement("p1")
         var hr = document.createElement("hr");
-        var s1 = document.createTextNode("  ID." + value.id + "  " + value.name + "  Price : $" + value.price )
+        var s1 = document.createTextNode("  ID " + value.id + " __ " + value.name)
+        var s2 = document.createTextNode(" $" + value.price)
         p.appendChild(s1)
+        p1.appendChild(s2)
         img.src = value.img
         img.style.width='300px'
         document.getElementById("mydiv").appendChild(img)
         document.getElementById("mydiv").appendChild(p)
+        document.getElementById("mydiv").appendChild(p1)
         document.getElementById("mydiv").appendChild(hr)
     }
 </script>
