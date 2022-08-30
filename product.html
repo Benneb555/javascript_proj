@@ -20,8 +20,11 @@
     const id08 = { id: 08, name: 'Tai-Hao T15 Dark Blood Black+Red PBT Double Shot', price: 1590, img: '08.jpg' }
     const id09 = { id: 09, name: 'Tai-Hao T23 The Forest Blue PBT Backlit', price: 1990, img: '09.jpg' }
     const id10 = { id: 10, name: 'Tai-Hao T4 England Blue ABS Double Shot', price: 990, img: '10.jpg' }
+    const id11 = { id: 11, name: 'Tai-Hao T2 Purple wave ABS Double Shot', price: 990, img: '11.jpg' }
+    const id12 = { id: 12, name: 'Tai-Hao T20 Miami Lights PBT Backlit', price: 1990, img: '12.jpg' }
+    const id13 = { id: 13, name: 'Tai-Hao T1 Pink Love ABS Double Shot', price: 990, img: '13.jpg' }
 
-    const arr_menu = [id01, id02, id03, id04, id05, id06, id07, id08, id09, id10]
+    const arr_menu = [id01, id02, id03, id04, id05, id06, id07, id08, id09, id10, id11, id12, id13]
 
     function showMenu() {
         if (check) {
@@ -45,8 +48,9 @@
         var s1 = document.createTextNode("  ID." + value.id + "  " + value.name + "  Price : $" + value.price )
         p.appendChild(s1)
         img.src = value.img
-        document.getElementById("mydiv").appendChild(p)
+        img.style.width='300px'
         document.getElementById("mydiv").appendChild(img)
+        document.getElementById("mydiv").appendChild(p)
         document.getElementById("mydiv").appendChild(hr)
     }
 </script>
