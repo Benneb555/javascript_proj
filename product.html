@@ -1,1 +1,57 @@
-<>
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENN's SHOP</title>
+</head>
+
+<script>
+    var check = true;
+    const id01 = { id: 01, name: 'Loga TUKTUK', price: 1790, img: '01.jpg' }
+    const id02 = { id: 02, name: 'Loga PRINTSTREAM', price: 1990, img: '02.jpg' }
+    const id03 = { id: 03, name: 'Loga GOOD OLD DAYS 80', price: 1790, img: '03.jpg' }
+    const id04 = { id: 04, name: 'Tai-Hao T10 Midnight Sun ABS Double Shot', price: 1390, img: '04.jpg' }
+    const id05 = { id: 05, name: 'Tai-Hao Blue/Pink ABS Double Shot', price: 1190, img: '05.jpg' }
+    const id06 = { id: 06, name: 'Tai-Hao T12 Mint/Red ABS Double Shot', price: 1190, img: '06.jpg' }
+    const id07 = { id: 07, name: 'Tai-Hao Mint/Beige ABS Double Shot', price: 1190, img: '07.jpg' }
+    const id08 = { id: 08, name: 'Tai-Hao T15 Dark Blood Black+Red PBT Double Shot', price: 1590, img: '08.jpg' }
+    const id09 = { id: 09, name: 'Tai-Hao T23 The Forest Blue PBT Backlit', price: 1990, img: '09.jpg' }
+    const id10 = { id: 10, name: 'Tai-Hao T4 England Blue ABS Double Shot', price: 990, img: '10.jpg' }
+
+    const arr_menu = [id01, id02, id03, id04, id05, id06, id07, id08, id09, id10]
+
+    function showMenu() {
+        if (check) {
+            const Div = document.createElement("div");
+            Div.setAttribute("id", "mydiv");
+            document.body.appendChild(Div);
+            arr_menu.forEach(myFunction);
+            check = false;
+        }
+        else {
+            const element = document.getElementById('mydiv')
+            element.remove();
+            check = true;
+        }
+    }
+
+    function myFunction(value) {
+        var img = document.createElement("img");
+        var p = document.createElement("p");
+        var hr = document.createElement("hr");
+        var s1 = document.createTextNode("  ID." + value.id + "  " + value.name + "  Price : $" + value.price )
+        p.appendChild(s1)
+        img.src = value.img
+        document.getElementById("mydiv").appendChild(p)
+        document.getElementById("mydiv").appendChild(img)
+        document.getElementById("mydiv").appendChild(hr)
+    }
+</script>
+
+<body>
+    <h2>Click the button below to show the product</h2>
+    <button onclick="showMenu()"> all product</button>
+</body>
